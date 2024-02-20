@@ -19,7 +19,7 @@ function matchArgs() {
                 for (let i = 1; i < pagesVal + 1; i++) {
                     urlMap.set(urlVal + i, selectorVal);
                 }
-                return 1;
+                return null;
             }
         }
     }
@@ -27,7 +27,7 @@ function matchArgs() {
     let builder = buildURL;
 
     process.argv.find((a, i) => {
-        if (!builder || builder === 1) {
+        if (!builder) {
             builder = buildURL;
         }
 
@@ -39,7 +39,7 @@ function matchArgs() {
                     return;
                 }
                 builder = builder(a, process.argv[i + 1]);
-                break;
+            break;
         }
     })
 
@@ -64,7 +64,7 @@ function matchArgs() {
             return t;
         }, selector)
 
-        titles.forEach(t => console.log(`${t}`));
+        titles.forEach(t => console.log(t));
     }
 
     await browser.close();

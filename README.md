@@ -1,9 +1,12 @@
-# TOPIC
+# GOALS
+- Zero dependency
 - UNIX philosophy
 - pipe and filter architecture
 
 # TODO
 - [ ] ghcr.io
-- [ ] add go distributor to the same repo
+- [x] add go distributor to the same repo
 - [ ] instructions 
-- [ ] name it to something nasty like pump & dump
+- [x] name it to something nasty like pump & dump
+- [ ] tests maybe :)
+- [x] connect to puppeteer
