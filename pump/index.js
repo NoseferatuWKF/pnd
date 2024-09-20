@@ -3,6 +3,7 @@ import puppeteer from 'puppeteer';
 function matchArgs() {
     const urlMap = new Map();
 
+    // TODO: create a Monad for this
     function buildURL(url, urlVal) {
         if (url !== '--url') {
             return null;
